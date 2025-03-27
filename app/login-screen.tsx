@@ -1,19 +1,24 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 
+import { InputsComponentLogin } from '../components/LoginScreen/Inputs';
+import { InforComponentLogin } from '@/components/LoginScreen/Infor';
+
 const { width, height } = Dimensions.get('window');
-const navigation = useRouter();
 
 export default function LoginScreen() {
+    const navigation = useRouter();
+
     return (
         <View style={styles.container}>
             <View style={styles.topContainer}>
-                {/*Adicionar icones*/}
-                <Text style={styles.backButton} onPress={() => navigation.push('/index')}>Voltar</Text>
+                <Ionicons name='arrow-back' style={styles.backButton} onPress={() => navigation.back()} />
             </View>
+            <InputsComponentLogin />
+            <InforComponentLogin />
         </View>
-
     )
 };
 const styles = StyleSheet.create({
@@ -31,8 +36,10 @@ const styles = StyleSheet.create({
     },
     backButton: {
         color: '#fff',
-        fontSize: 18,
+        fontSize: width * 0.08,
         justifyContent: 'center',
         alignItems: 'center'
-    }
+    },
+
+
 })

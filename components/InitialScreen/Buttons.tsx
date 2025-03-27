@@ -4,9 +4,10 @@ import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-nati
 
 const Br = () => <Text>{'\n'}</Text>;
 const { width, height } = Dimensions.get('window');
-const navigation = useRouter();
 
 export const ButtonsInitialScreen = () => {
+    const navigation = useRouter();
+
     return (
         <View style={styles.container}>
             <View style={styles.content}>
