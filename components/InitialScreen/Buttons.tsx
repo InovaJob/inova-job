@@ -13,7 +13,10 @@ export const ButtonsInitialScreen = () => {
             <View style={styles.content}>
                 <View style={styles.textArea}>
                     <Text style={styles.text1}> Olá! Seja bem vindo(a)!</Text>
-                    <Text style={styles.text2}> A melhor plataforma virtual <Br />     para vagas de emprego</Text>
+                    <View style={styles.breakText}>
+                        <Text style={styles.text2}>A melhor plataforma virtual</Text>
+                        <Text style={styles.text2}>para vagas de emprego</Text>
+                    </View>
                 </View>
                 <View style={styles.buttonsArea}>
                     <TouchableOpacity style={styles.entrar} activeOpacity={0.7} onPress={() => navigation.push('/login-screen')}>
@@ -49,6 +52,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 16,
+        gap: height *  0.01
+    },
+    breakText: {
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center'
     },
     buttonsArea: {
         flex: 1,
@@ -69,21 +78,32 @@ const styles = StyleSheet.create({
         fontSize: width * 0.05,
         textAlign: 'center',
     },
+
+
     textButton: {
         textTransform: 'uppercase',
-        fontSize: width * 0.05,
+        fontSize: width * 0.04,
         color: '#fff',
+        width: '100%',
+        textAlign: 'center'
     },
     textButtonCPF: {
+        textAlign: 'center',
         textTransform: 'uppercase',
-        fontSize: width * 0.05,
-        color: '#3E5C76'
+        fontSize: width * 0.04,
+        color: '#3E5C76',
+        width: '100%'
     },
     textButtonCNPJ: {
+        textAlign: 'center',
         textTransform: 'uppercase',
-        fontSize: width * 0.05,
-        color: '#3E5C76'
+        fontSize: width * 0.04,
+        color: '#3E5C76',
+        width: '100%'
     },
+
+
+
     entrar: {
         alignItems: 'center',
         justifyContent: 'center',

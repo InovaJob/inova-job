@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 export const InforComponentLogin = () => {
     return (
         <View style={styles.container}>
-            <Text>Infor components</Text>
+            <Text>fasfsdf</Text>
         </View>
     )
 }
