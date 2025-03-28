@@ -5,6 +5,8 @@ import { View, Text, StyleSheet, Dimensions, TouchableOpacity } from 'react-nati
 const Br = () => <Text>{'\n'}</Text>;
 const { width, height } = Dimensions.get('window');
 
+import { GlobalButtonLogin } from '@/globalComponents/ButtonLogin';
+
 export const ButtonsInitialScreen = () => {
     const navigation = useRouter();
 
@@ -19,9 +21,7 @@ export const ButtonsInitialScreen = () => {
                     </View>
                 </View>
                 <View style={styles.buttonsArea}>
-                    <TouchableOpacity style={styles.entrar} activeOpacity={0.7} onPress={() => navigation.push('/login-screen')}>
-                        <Text style={styles.textButton}>entrar</Text>
-                    </TouchableOpacity>
+                    <GlobalButtonLogin widthProp={'100%'} />
                     <TouchableOpacity style={styles.criarConta} activeOpacity={0.7}>
                         <Text style={styles.textButtonCPF}>cadastre-se</Text>
                     </TouchableOpacity>
@@ -52,12 +52,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 16,
-        gap: height *  0.01
+        gap: height * 0.01
     },
     breakText: {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center'
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     buttonsArea: {
         flex: 1,
@@ -80,13 +80,7 @@ const styles = StyleSheet.create({
     },
 
 
-    textButton: {
-        textTransform: 'uppercase',
-        fontSize: width * 0.04,
-        color: '#fff',
-        width: '100%',
-        textAlign: 'center'
-    },
+
     textButtonCPF: {
         textAlign: 'center',
         textTransform: 'uppercase',
@@ -104,14 +98,7 @@ const styles = StyleSheet.create({
 
 
 
-    entrar: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#3E5C76',
-        borderRadius: 8,
-        height: height * 0.05,
-        width: '100%'
-    },
+
     criarConta: {
         alignItems: 'center',
         justifyContent: 'center',

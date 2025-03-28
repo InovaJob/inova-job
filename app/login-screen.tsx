@@ -27,14 +27,14 @@ export default function LoginScreen() {
             hideContent.remove();
         }
     }, []);
-    
+
     return (
         <View style={styles.container}>
             <View style={styles.topContainer}>
                 <Ionicons name='arrow-back' style={styles.backButton} onPress={() => navigation.back()} />
             </View>
             <InputsComponentLogin />
-            {isKeyboardVisible ? null : <InforComponentLogin />}
+            { isKeyboardVisible ? null : <InforComponentLogin /> }
         </View>
     )
 };

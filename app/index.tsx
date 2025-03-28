@@ -1,11 +1,15 @@
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, StyleSheet, StatusBar } from 'react-native';
 import { LogoComponent } from '../components/InitialScreen/LogoImages'
 import { ButtonsInitialScreen } from '../components/InitialScreen/Buttons';
 
 
-export default function WelcomeScreen(){
+export default function WelcomeScreen() {
     return (
         <View style={styles.globalContainer}>
+            <StatusBar
+                backgroundColor={'transparent'}
+                barStyle={'light-content'}
+            />
             <LogoComponent />
             <ButtonsInitialScreen />
         </View>
