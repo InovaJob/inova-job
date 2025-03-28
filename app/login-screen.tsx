@@ -34,7 +34,7 @@ export default function LoginScreen() {
                 <Ionicons name='arrow-back' style={styles.backButton} onPress={() => navigation.back()} />
             </View>
             <InputsComponentLogin />
-            { isKeyboardVisible ? null : <InforComponentLogin /> }
+            {isKeyboardVisible ? null : <InforComponentLogin />}
         </View>
     )
 };
