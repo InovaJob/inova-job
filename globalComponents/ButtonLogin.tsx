@@ -5,12 +5,9 @@ import { DimensionValue } from 'react-native';
 
 const { width, height } = Dimensions.get('window');
 
-interface ButtonProps {
-    widthProp?: any;
-    fontWeightProp?: any;
-}
+import { buttonProps } from '@/interfaces/componentInterfaces/ButtonProps';
 
-export const GlobalButtonLogin: React.FC<ButtonProps> = ({ widthProp, fontWeightProp }) => {
+export const GlobalButtonLogin: React.FC<buttonProps> = ({ widthProp, fontWeightProp }) => {
     const navigation = useRouter();
 
     return (

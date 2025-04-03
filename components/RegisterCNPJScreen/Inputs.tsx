@@ -1,11 +1,6 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
 
-interface inputProps {
-    label?: any;
-    placeholder?: any;
-    onChangeText?: any;
-    value?: any
-}
+import { inputProps } from "@/interfaces/componentInterfaces/InputProps";
 
 export const InputCNPJScreen: React.FC<inputProps> = ({ label, placeholder, onChangeText, value }) => {
     return (
@@ -16,6 +11,7 @@ export const InputCNPJScreen: React.FC<inputProps> = ({ label, placeholder, onCh
                 placeholder={placeholder}
                 value={value}
                 onChangeText={onChangeText}
+                placeholderTextColor={"#3E5C76"}
             />
         </View>
     )
@@ -28,10 +24,12 @@ const style = StyleSheet.create({
         marginBottom: 30,
         borderBottomColor: "#fff",
         borderBottomWidth: 0.8,
+        color: "#3E5C76"
     },
     label: {
-        fontSize: 15,
+        fontSize: 18,
         marginBottom: 8,
-        color: "#fff",
+        color: "#3E5C76",
+        fontWeight: 600
     },
 })

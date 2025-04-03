@@ -20,13 +20,13 @@ export default function RegisterStep1() {
     const navigation = useRouter();
 
     const [nomeEmpresa, setNomeEmpresa] = useState("");
-    const [cep, setCep] = useState(""); cep
-    const [localidade, setLocalidade] = useState("");
-    const [telefone, setTelefone] = useState("");
+    const [cnpj, setCnpj] = useState("");
     const [emailCorporativo, setEmailcoporativo] = useState("");
+    const [telefone, setTelefone] = useState("");
+    const [cep, setCep] = useState("");
+    const [localidade, setLocalidade] = useState("");
     const [senha, setSenha] = useState("");
     const [confirmarSenha, setConfirmarSenha] = useState("");
-    const [cnpj, setCnpj] = useState("");
 
     return (
         <View style={style.container}>
@@ -36,12 +36,12 @@ export default function RegisterStep1() {
                 </View>
                 <View style={style.inputsContainer}>
                     <Text style={style.title}>Vamos começar!</Text>
-                    <Text style={style.subtitle}>Criar uma conta para sua Empresa</Text>
+                    <Text style={style.subtitle}>Crie uma conta para sua Empresa</Text>
 
                     <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
-                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"xxxxx-xxx"} onChangeText={setCep} value={cep} />
-                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
-                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
+                    <InputCNPJScreen label={"CNPJ"} placeholder={"xx.xxx.xxx/0001-xx"} onChangeText={setCnpj} value={cnpj} />
+                    <InputCNPJScreen label={"Email corporativo"} placeholder={"inovajobstartup@gmail.com"} onChangeText={setEmailcoporativo} value={emailCorporativo} />
+                    <InputCNPJScreen label={"Telefone"} placeholder={"859xxxx-xxxx"} onChangeText={setTelefone} value={telefone} />
 
                 </View>
             </View>
@@ -61,7 +61,6 @@ const style = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
         gap: height * 0.04,
-        position: "fixed",
     },
     topContainer: {
         flex: 0.1,

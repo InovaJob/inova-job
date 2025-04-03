@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import { ButtionsLoginComponent } from '../bottomComponents/Buttons';
+import { ButtionsLoginComponent } from '../bottom/Buttons';
 
 const { width, height } = Dimensions.get('window');
 

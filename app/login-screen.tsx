@@ -4,8 +4,8 @@ import { Dimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
-import { InputsComponentLogin } from '../components/LoginScreen/topComponents/Inputs';
-import { InforComponentLogin } from '../components/LoginScreen/topComponents/Infor';
+import { InputsComponentLogin } from '../components/LoginScreen/top/Inputs';
+import { InforComponentLogin } from '../components/LoginScreen/top/Infor';
 
 const { width, height } = Dimensions.get('window');
 
