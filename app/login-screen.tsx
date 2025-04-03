@@ -14,7 +14,7 @@ export default function LoginScreen() {
 
     const [isKeyboardVisible, setIskeyboardVisible] = useState(false);
 
-    //hooksFor conditional rendering of InforComponentLogin
+    //hooks For conditional render of InforComponentLogin
     useEffect(() => {
         const showContent = Keyboard.addListener('keyboardDidShow', () => {
             setIskeyboardVisible(true)

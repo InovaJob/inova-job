@@ -32,7 +32,6 @@ export const InputsComponentLogin = () => {
                         />
                     </View>
                 </View>
-
             </View>
         </TouchableWithoutFeedback>
     )

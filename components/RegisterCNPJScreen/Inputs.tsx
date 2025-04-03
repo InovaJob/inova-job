@@ -1,4 +1,7 @@
 import { View, Text, TextInput, StyleSheet } from "react-native";
+import { Dimensions } from "react-native";
+
+const { width, height } = Dimensions.get("window");
 
 import { inputProps } from "@/interfaces/componentInterfaces/InputProps";
 
@@ -24,12 +27,12 @@ const style = StyleSheet.create({
         marginBottom: 30,
         borderBottomColor: "#fff",
         borderBottomWidth: 0.8,
-        color: "#3E5C76"
+        color: "#3E5C76",
+        fontSize: width * 0.045
     },
     label: {
-        fontSize: 18,
+        fontSize: width * 0.04,
         marginBottom: 8,
-        color: "#3E5C76",
-        fontWeight: 600
+        color: "#fff",
     },
 })

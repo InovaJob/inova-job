@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('window');
 
 import { buttonProps } from '@/interfaces/componentInterfaces/ButtonProps';
 
-export const GlobalButtonLogin: React.FC<buttonProps> = ({ widthProp, fontWeightProp }) => {
+export const GlobalButtonLogin: React.FC<buttonProps> = ({ widthProp, fontWeightProp, children }) => {
     const navigation = useRouter();
 
     return (
@@ -17,7 +17,7 @@ export const GlobalButtonLogin: React.FC<buttonProps> = ({ widthProp, fontWeight
                 activeOpacity={0.7}
                 onPress={() => navigation.push('/login-screen')}
             >
-                <Text style={[styles.textButton, { fontWeight: fontWeightProp }]}>Entrar</Text>
+                <Text style={[styles.textButton, { fontWeight: fontWeightProp }]}>{children}</Text>
             </TouchableOpacity>
         </View>
     );

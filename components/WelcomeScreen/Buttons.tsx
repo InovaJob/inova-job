@@ -21,7 +21,7 @@ export const ButtonsInitialScreen = () => {
                     </View>
                 </View>
                 <View style={styles.buttonsArea}>
-                    <GlobalButtonLogin widthProp={'100%'} />
+                    <GlobalButtonLogin widthProp={'100%'} children={"entrar"} />
                     <TouchableOpacity style={styles.criarConta} activeOpacity={0.7}>
                         <Text style={styles.textButtonCPF}>cadastre-se</Text>
                     </TouchableOpacity>

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { useRouter } from "expo-router";
+import { Ionicons } from "@expo/vector-icons";
 import {
     View,
     Text,
-    TextInput,
-    TouchableOpacity,
     StyleSheet,
+    Dimensions,
+    KeyboardAvoidingView,
+    Platform,
+    TouchableWithoutFeedback,
+    Keyboard,
 } from "react-native";
-
-import { Ionicons } from "@expo/vector-icons";
-import { Dimensions } from "react-native";
-import { useRouter } from "expo-router";
 
 import { GlobalButtonLogin } from "@/globalComponents/ButtonLogin";
 import { InputCNPJScreen } from "@/components/RegisterCNPJScreen/Inputs";
@@ -23,99 +24,68 @@ export default function RegisterStep1() {
     const [cnpj, setCnpj] = useState("");
     const [emailCorporativo, setEmailcoporativo] = useState("");
     const [telefone, setTelefone] = useState("");
-    const [cep, setCep] = useState("");
-    const [localidade, setLocalidade] = useState("");
-    const [senha, setSenha] = useState("");
-    const [confirmarSenha, setConfirmarSenha] = useState("");
 
     return (
-        <View style={style.container}>
-            <View style={style.content}>
-                <View style={style.topContainer}>
-                    <Ionicons name='arrow-back' style={style.backButton} onPress={() => navigation.back()} />
+        <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
+            style={styles.container}
+        >
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.content}>
+                    <View style={styles.topContainer}>
+                        <Ionicons name="arrow-back" style={styles.backButton} onPress={() => navigation.back()} />
+                    </View>
+                    <View style={styles.inputsContainer}>
+                        <Text style={styles.title}>Vamos começar!</Text>
+                        <Text style={styles.subtitle}>Crie uma conta para sua Empresa</Text>
+                        <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
+                        <InputCNPJScreen label={"CNPJ"} placeholder={"xx.xxx.xxx/0001-xx"} onChangeText={setCnpj} value={cnpj} />
+                        <InputCNPJScreen label={"Email corporativo"} placeholder={"inovajobstartup@gmail.com"} onChangeText={setEmailcoporativo} value={emailCorporativo} />
+                        <InputCNPJScreen label={"Telefone"} placeholder={"859xxxx-xxxx"} onChangeText={setTelefone} value={telefone} />
+                    </View>
                 </View>
-                <View style={style.inputsContainer}>
-                    <Text style={style.title}>Vamos começar!</Text>
-                    <Text style={style.subtitle}>Crie uma conta para sua Empresa</Text>
-
-                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
-                    <InputCNPJScreen label={"CNPJ"} placeholder={"xx.xxx.xxx/0001-xx"} onChangeText={setCnpj} value={cnpj} />
-                    <InputCNPJScreen label={"Email corporativo"} placeholder={"inovajobstartup@gmail.com"} onChangeText={setEmailcoporativo} value={emailCorporativo} />
-                    <InputCNPJScreen label={"Telefone"} placeholder={"859xxxx-xxxx"} onChangeText={setTelefone} value={telefone} />
-
-                </View>
-            </View>
-        </View>
+            </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
     );
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#1a2b44",
-        width: width * 1,
     },
     content: {
+        flex: 1,
         width: "100%",
-        height: "100%",
-        justifyContent: "flex-start",
         alignItems: "center",
-        gap: height * 0.04,
     },
     topContainer: {
-        flex: 0.1,
-        width: width * 1,
-        marginTop: height * 0.05,
+        width: "100%",
         paddingHorizontal: width * 0.05,
+        paddingTop: height * 0.05,
+        paddingBottom: 10,
+        justifyContent: "center",
     },
-
     inputsContainer: {
+        flex: 1,
         width: "100%",
         paddingHorizontal: width * 0.06,
-        marginBottom: "-45%"
+        paddingTop: 20,
     },
-
     backButton: {
-        color: '#fff',
+        color: "#fff",
         fontSize: width * 0.08,
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     title: {
         color: "#fff",
         fontSize: 24,
         fontWeight: "bold",
+        marginBottom: 10,
     },
     subtitle: {
         color: "#ccc",
         fontSize: 16,
         marginBottom: 20,
     },
-
-    input: {
-        backgroundColor: "transparent",
-        padding: 8,
-        marginBottom: 30,
-        borderBottomColor: "#fff",
-        borderBottomWidth: 0.8,
-    },
-    label: {
-        fontSize: 15,
-        marginBottom: 8,
-        color: "#fff",
-    },
-
-    button: {
-        backgroundColor: "#556B8E",
-        padding: 20,
-        borderRadius: 5,
-        alignItems: "center",
-        width: "50%",
-        alignSelf: "center",
-    },
-
-    textbutton: {
-        color: "#fff",
-        fontWeight: "bold",
-    },
 });
+
