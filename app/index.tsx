@@ -1,6 +1,6 @@
 import { View, StyleSheet, StatusBar } from 'react-native';
-import { LogoComponent } from '../components/InitialScreen/LogoImages'
-import { ButtonsInitialScreen } from '../components/InitialScreen/Buttons';
+import { LogoComponent } from '../components/WelcomeScreen/LogoImages'
+import { ButtonsInitialScreen } from '../components/WelcomeScreen/Buttons';
 
 
 export default function WelcomeScreen() {

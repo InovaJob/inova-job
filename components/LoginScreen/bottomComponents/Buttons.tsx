@@ -21,10 +21,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignSelf: 'stretch',
         flexDirection: "column",
-        
     },
     link: {
-
     },
     lineContainer: {
 

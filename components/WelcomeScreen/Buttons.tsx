@@ -25,8 +25,8 @@ export const ButtonsInitialScreen = () => {
                     <TouchableOpacity style={styles.criarConta} activeOpacity={0.7}>
                         <Text style={styles.textButtonCPF}>cadastre-se</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.cadastroCNPJ} activeOpacity={0.7}>
-                        <Text style={styles.textButtonCNPJ}>cadastrar empresa</Text>
+                    <TouchableOpacity style={styles.cadastroCNPJ} onPress={() => navigation.push('/register/register_step1')} activeOpacity={0.7}>
+                        <Text style={styles.textButtonCNPJ} >cadastrar empresa</Text>
                     </TouchableOpacity>
                 </View>
             </View>
