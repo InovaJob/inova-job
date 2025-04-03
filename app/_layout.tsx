@@ -31,7 +31,7 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name='login-screen' options={{ headerShown: false }} />
-        <Stack.Screen name='register_step1' options={{ headerShown: false }} />
+        <Stack.Screen name='register/register_step1' options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>

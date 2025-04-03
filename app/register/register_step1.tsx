@@ -7,58 +7,44 @@ import {
     StyleSheet,
 } from "react-native";
 
-export default function App() {
-    const [NomeEmpresa, setNomeEmprea] = useState("");
-    const [Cep, setCep] = useState("");
-    const [Localidade, setLocalidade] = useState("");
-    const [Telefone, setTelefone] = useState("");
-    const [EmailCorporativo, setEmailcoporativo] = useState("");
-    const [Senha, setSenha] = useState("");
-    const [ConfirmarSenha, setConfirmarSenha] = useState("");
-    const [Cnpj, setCnpj] = useState("");
+import { Ionicons } from "@expo/vector-icons";
+import { Dimensions } from "react-native";
+import { useRouter } from "expo-router";
+
+import { GlobalButtonLogin } from "@/globalComponents/ButtonLogin";
+import { InputCNPJScreen } from "@/components/RegisterCNPJScreen/Inputs";
+
+const { width, height } = Dimensions.get("window");
+
+export default function RegisterStep1() {
+    const navigation = useRouter();
+
+    const [nomeEmpresa, setNomeEmpresa] = useState("");
+    const [cep, setCep] = useState(""); cep
+    const [localidade, setLocalidade] = useState("");
+    const [telefone, setTelefone] = useState("");
+    const [emailCorporativo, setEmailcoporativo] = useState("");
+    const [senha, setSenha] = useState("");
+    const [confirmarSenha, setConfirmarSenha] = useState("");
+    const [cnpj, setCnpj] = useState("");
 
     return (
         <View style={style.container}>
-            <Text style={style.title}>Vamos começar!</Text>
-            <Text style={style.subtitle}>Criar uma conta para sua Empresa</Text>
+            <View style={style.content}>
+                <View style={style.topContainer}>
+                    <Ionicons name='arrow-back' style={style.backButton} onPress={() => navigation.back()} />
+                </View>
+                <View style={style.inputsContainer}>
+                    <Text style={style.title}>Vamos começar!</Text>
+                    <Text style={style.subtitle}>Criar uma conta para sua Empresa</Text>
 
-            <Text style={style.label}>Nome da Empresa</Text>
-            <TextInput
-                style={style.input}
-                placeholder="Nome Empresa"
-                value={NomeEmpresa}
-                onChangeText={setNomeEmprea}
-            />
+                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
+                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"xxxxx-xxx"} onChangeText={setCep} value={cep} />
+                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
+                    <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
 
-            <Text style={style.label}>CEP</Text>
-            <TextInput
-                style={style.input}
-                placeholder="CEP"
-                value={Cep}
-                onChangeText={setCep}
-                keyboardType="numeric"
-            />
-
-            <Text style={style.label}>Localidade</Text>
-            <TextInput
-                style={style.input}
-                placeholder="Loclidade"
-                value={Localidade}
-                onChangeText={setLocalidade}
-            />
-
-            <Text style={style.label}>Telefone</Text>
-            <TextInput
-                style={style.input}
-                placeholder="Telefone"
-                value={Telefone}
-                onChangeText={setTelefone}
-                keyboardType="phone-pad"
-            />
-
-            <TouchableOpacity style={style.button}>
-                <Text style={style.textbutton}>CONTINUA</Text>
-            </TouchableOpacity>
+                </View>
+            </View>
         </View>
     );
 }
@@ -67,34 +53,57 @@ const style = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#1a2b44",
-        padding: 20,
+        width: width * 1,
+    },
+    content: {
+        width: "100%",
+        height: "100%",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        gap: height * 0.04,
+        position: "fixed",
+    },
+    topContainer: {
+        flex: 0.1,
+        width: width * 1,
+        marginTop: height * 0.05,
+        paddingHorizontal: width * 0.05,
     },
 
+    inputsContainer: {
+        width: "100%",
+        paddingHorizontal: width * 0.06,
+        marginBottom: "-45%"
+    },
+
+    backButton: {
+        color: '#fff',
+        fontSize: width * 0.08,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
     title: {
         color: "#fff",
         fontSize: 24,
         fontWeight: "bold",
     },
-
     subtitle: {
         color: "#ccc",
         fontSize: 16,
         marginBottom: 20,
     },
 
-    label: {
-        fontSize: 15,
-        marginBottom: 8,
-        color: "#fff",
-    },
-
     input: {
         backgroundColor: "transparent",
         padding: 8,
         marginBottom: 30,
-        borderRadius: 5,
         borderBottomColor: "#fff",
-        borderBottomWidth: 1,
+        borderBottomWidth: 0.8,
+    },
+    label: {
+        fontSize: 15,
+        marginBottom: 8,
+        color: "#fff",
     },
 
     button: {
