@@ -1,5 +1,6 @@
 export interface buttonProps {
     widthProp?: any;
     fontWeightProp?: any;
-    children?: any
+    children?: any;
+    navigationProp?: any;
 }

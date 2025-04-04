@@ -1,7 +1,8 @@
-import { View, StyleSheet, StatusBar } from 'react-native';
+import { View, StatusBar } from 'react-native';
 import { LogoComponent } from '../components/WelcomeScreen/LogoImages'
 import { ButtonsInitialScreen } from '../components/WelcomeScreen/Buttons';
 
+import { styles } from '@/styles/StyleScreens/welcomeScr';
 
 export default function WelcomeScreen() {
     return (
@@ -15,16 +16,3 @@ export default function WelcomeScreen() {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    globalContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        backgroundColor: '#223A5C',
-        width: '100%',
-        height: '100%',
-    },
-
-})

@@ -1,7 +1,8 @@
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View } from 'react-native';
 import { ButtionsLoginComponent } from '../bottom/Buttons';
 
-const { width, height } = Dimensions.get('window');
+//Styles
+import { styles } from '@/styles/StyleComponents/login.scr.comp.style/inforStyle'; 
 
 export const InforComponentLogin = () => {
     return (
@@ -11,12 +12,3 @@ export const InforComponentLogin = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        paddingHorizontal: width * 0.05
-    }
-})

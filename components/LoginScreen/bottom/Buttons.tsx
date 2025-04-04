@@ -1,15 +1,14 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import { GlobalButtonLogin } from '@/globalComponents/ButtonLogin';
-import { SensorType } from 'react-native-reanimated';
 
-import { Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window")
+//Styles
+import { styles } from '@/styles/StyleComponents/login.scr.comp.style/buttonsStyle';
 
 export const ButtionsLoginComponent = () => {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <GlobalButtonLogin widthProp="70%" fontWeightProp="bold" children={"fazer login"} />
+                <GlobalButtonLogin widthProp="70%" fontWeightProp="bold" children={"fazer login"} navigationProp={null} />
                 <Text >Esqueceu a senha?</Text>
                 <View style={styles.content}>
                     <View></View>
@@ -21,15 +20,3 @@ export const ButtionsLoginComponent = () => {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: 'center',
-        flexDirection: "column",
-        width: width * 1
-    },
-    content: {
-        width: "100%",
-    }
-})

@@ -1,7 +1,6 @@
-import { View, Text, TextInput, StyleSheet } from "react-native";
-import { Dimensions } from "react-native";
+import { View, Text, TextInput } from "react-native";
 
-const { width, height } = Dimensions.get("window");
+import { style } from "@/styles/StyleComponents/register.cnpj.style";
 
 import { inputProps } from "@/interfaces/componentInterfaces/InputProps";
 
@@ -14,25 +13,8 @@ export const InputCNPJScreen: React.FC<inputProps> = ({ label, placeholder, onCh
                 placeholder={placeholder}
                 value={value}
                 onChangeText={onChangeText}
-                placeholderTextColor={"#3E5C76"}
+                placeholderTextColor={"#A3B5C1"}
             />
         </View>
     )
 }
-
-const style = StyleSheet.create({
-    input: {
-        backgroundColor: "transparent",
-        padding: 8,
-        marginBottom: 30,
-        borderBottomColor: "#fff",
-        borderBottomWidth: 0.8,
-        color: "#3E5C76",
-        fontSize: width * 0.045
-    },
-    label: {
-        fontSize: width * 0.04,
-        marginBottom: 8,
-        color: "#fff",
-    },
-})
