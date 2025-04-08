@@ -6,10 +6,10 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 //Styles
-import { styles } from '@/styles/StyleScreens/loginScr';
+import { styles } from './styles';
 //Components
-import { InputsComponentLogin } from '../components/LoginScreen/top/Inputs';
-import { InforComponentLogin } from '../components/LoginScreen/bottom/Infor';
+import { InputsComponentLogin } from '../../components/LoginScreen/top/Inputs';
+import { InforComponentLogin } from '../../components/LoginScreen/bottom/Infor';
 
 const { width, height } = Dimensions.get('window');
 

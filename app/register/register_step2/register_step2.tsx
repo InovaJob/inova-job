@@ -4,13 +4,12 @@ import { Ionicons } from "@expo/vector-icons";
 import { View, Text, TouchableWithoutFeedback, Keyboard, SafeAreaView, ScrollView } from "react-native";
 
 //Styles
-import { styles } from "@/styles/StyleScreens/registerStep1";
+import { styles } from "./styles"
 //Components
 import { GlobalButtonLogin } from "@/globalComponents/ButtonLogin";
-import { InputCNPJScreen } from "@/components/RegisterCNPJScreen/Inputs";
+import { InputCNPJScreen } from "@/globalComponents/Inputs";
 //Hooks
 import { IsKeyboardVisible } from "@/hooks/KeyboardVisible";
-import { style } from "@/styles/StyleComponents/register.cnpj.style";
 
 export default function RegisterStep1() {
     const navigation = useRouter();

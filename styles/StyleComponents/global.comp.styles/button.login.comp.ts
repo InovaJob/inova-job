@@ -5,7 +5,8 @@ const { width, height } = Dimensions.get("window");
 export const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        alignItems: 'center',  
+        alignItems: 'center',
+        width: "100%"
     },
     entrar: {
         borderRadius: 8,
