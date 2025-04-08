@@ -5,10 +5,9 @@ const { width, height } = Dimensions.get("window");
 export const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center',  
     },
     entrar: {
-        backgroundColor: '#3E5C76',
         borderRadius: 8,
         height: height * 0.05,
         alignItems: 'center',
@@ -17,7 +16,6 @@ export const styles = StyleSheet.create({
     textButton: {
         textTransform: 'uppercase',
         fontSize: width * 0.04,
-        color: '#fff',
         textAlign: 'center',
     },
 });

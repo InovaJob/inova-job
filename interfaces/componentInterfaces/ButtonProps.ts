@@ -2,5 +2,7 @@ export interface buttonProps {
     widthProp?: any;
     fontWeightProp?: any;
     children?: any;
-    navigationProp?: any;
+    route?: any;
+    fontColor?: any;
+    background?: any;
 }

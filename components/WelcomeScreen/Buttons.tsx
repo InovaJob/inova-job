@@ -23,13 +23,9 @@ export const ButtonsInitialScreen = () => {
                     </View>
                 </View>
                 <View style={styles.buttonsArea}>
-                    <GlobalButtonLogin widthProp={'100%'} children={"entrar"} navigationProp={"/login-screen"} />
-                    <TouchableOpacity style={styles.criarConta} activeOpacity={0.7}>
-                        <Text style={styles.textButtonCPF}>cadastre-se</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.cadastroCNPJ} onPress={() => navigation.push('/register/register_step1')} activeOpacity={0.7}>
-                        <Text style={styles.textButtonCNPJ} >cadastrar empresa</Text>
-                    </TouchableOpacity>
+                    <GlobalButtonLogin widthProp={'100%'} children={"entrar"} route={"/login-screen"} fontColor={"#fff"} background={"#3E5C76"} />
+                    <GlobalButtonLogin widthProp={"100%"} children={"cadastre-se"} fontColor={"#3E5C76"} background={"#ffff"} />
+                    <GlobalButtonLogin widthProp={"100%"} children={"cadastrar empresa"} route={"/register/register_step1"} fontColor={"#3E5C76"} background={"#ffff"} />
                 </View>
             </View>
         </View>

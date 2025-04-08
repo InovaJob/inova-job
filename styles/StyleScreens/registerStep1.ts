@@ -48,7 +48,5 @@ export const styles = StyleSheet.create({
         width: "100%",
         top: height * 0.05,
         marginBottom: height * 0.06
-    },
-    modifyButton: {
     }
 });

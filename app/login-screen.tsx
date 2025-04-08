@@ -9,7 +9,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { styles } from '@/styles/StyleScreens/loginScr';
 //Components
 import { InputsComponentLogin } from '../components/LoginScreen/top/Inputs';
-import { InforComponentLogin } from '../components/LoginScreen/top/Infor';
+import { InforComponentLogin } from '../components/LoginScreen/bottom/Infor';
 
 const { width, height } = Dimensions.get('window');
 
