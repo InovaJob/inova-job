@@ -3,7 +3,7 @@ const { width, height } = Dimensions.get("window");
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 0.5,
+        flex: 1,
         alignItems: "center",
         justifyContent: 'center',
         flexDirection: "column",
@@ -54,10 +54,16 @@ export const styles = StyleSheet.create({
     socialContent: {
         width: "100%",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        gap: height * 0.02
     },
     text: {
-        color: "#fff"
+        color: "#A3B5C1",
+        fontSize: width * 0.03
+    },
+    linkText: {
+        fontSize: width * 0.03,
+        color: "#0866ff"
     },
     socialIcons: {
         width: "100%",
@@ -66,6 +72,11 @@ export const styles = StyleSheet.create({
     iconsContent: {
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        gap: width * 0.01
+    },
+    registerLink: {
+        flexDirection: "row",
+        gap: width * 0.01
     }
 })

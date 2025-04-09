@@ -9,7 +9,8 @@ export const style = StyleSheet.create({
         marginBottom: 30,
         borderBottomColor: "#fff",
         borderBottomWidth: 0.8,
-        fontSize: width * 0.040
+        fontSize: width * 0.040,
+        color: "#fff"
     },
     label: {
         fontSize: width * 0.045,

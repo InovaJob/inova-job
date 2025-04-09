@@ -7,10 +7,10 @@ import { View, Text, TouchableWithoutFeedback, Keyboard, SafeAreaView, ScrollVie
 import { styles } from "./styles"
 //Components
 import { GlobalButtonLogin } from "@/globalComponents/ButtonLogin";
-import { InputCNPJScreen } from "@/globalComponents/Inputs";
+import { InputGlobalComponent } from "@/globalComponents/Inputs";
 //Hooks
 import { IsKeyboardVisible } from "@/hooks/KeyboardVisible";
-import { style } from "@/styles/StyleComponents/register.cnpj.style";
+import { style } from "@/styles/StyleComponents/inputs.component";
 
 export default function RegisterStep1() {
     const navigation = useRouter();
@@ -35,11 +35,11 @@ export default function RegisterStep1() {
                             <Text style={styles.title}>Vamos começar!</Text>
                             <Text style={styles.subtitle}>Crie uma conta para sua Empresa</Text>
                         </View>
-                        <ScrollView>
-                            <InputCNPJScreen label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
-                            <InputCNPJScreen label={"CNPJ"} placeholder={"xx.xxx.xxx/0001-xx"} onChangeText={setCnpj} value={cnpj} />
-                            <InputCNPJScreen label={"Email corporativo"} placeholder={"inovajobstartup@gmail.com"} onChangeText={setEmailcoporativo} value={emailCorporativo} />
-                            <InputCNPJScreen label={"Telefone"} placeholder={"859****-****"} onChangeText={setTelefone} value={telefone} />
+                        <ScrollView showsVerticalScrollIndicator={false} >
+                            <InputGlobalComponent label={"Nome da empresa"} placeholder={"Inovajob"} onChangeText={setNomeEmpresa} value={nomeEmpresa} />
+                            <InputGlobalComponent label={"CNPJ"} placeholder={"xx.xxx.xxx/0001-xx"} onChangeText={setCnpj} value={cnpj} />
+                            <InputGlobalComponent label={"Email corporativo"} placeholder={"inovajobstartup@gmail.com"} onChangeText={setEmailcoporativo} value={emailCorporativo} />
+                            <InputGlobalComponent label={"Telefone"} placeholder={"859****-****"} onChangeText={setTelefone} value={telefone} />
 
                             <View style={styles.button}>
                                 <GlobalButtonLogin widthProp={"70%"} fontWeightProp={700} background={"#3c5a73"} children={"Próximo"} fontColor={"#ffff"} route={"/register/register_step2/register_step2"} />

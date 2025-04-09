@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: width * 1,
-        position: 'fixed',
+        position: 'fixed'
     },
     content: {
         flex: 1,
@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'flex-start',
-        width: '100%',
+        width: '100%'
     },
     titletxt: {
         color: '#fff',
@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
     },
     inputContainer: {
         flex: 1,
-        width: '100%',
+        width: '100%'
     },
     label: {
         color: '#A3B5C1',

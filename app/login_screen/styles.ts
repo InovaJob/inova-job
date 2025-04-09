@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         width: width * 1,
         marginTop: height * 0.05,
-        paddingHorizontal: width * 0.05,
+        paddingHorizontal: width * 0.05
     },
     backButton: {
         color: '#fff',

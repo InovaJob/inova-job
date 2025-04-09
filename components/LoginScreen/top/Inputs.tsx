@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, TextInput } from 'react-native';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 
-//Styles
+import { InputGlobalComponent } from '@/globalComponents/Inputs';
 import { styles } from '@/styles/StyleComponents/login.scr.comp.style/inputsStyle';
 
 export const InputsComponentLogin = () => {
@@ -16,20 +16,10 @@ export const InputsComponentLogin = () => {
 
                 <View style={styles.inputsArea}>
                     <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Email</Text>
-                        <TextInput
-                            placeholder='example@gmail.com'
-                            style={styles.input}
-                            placeholderTextColor={styles.input.color}
-                        />
+                        <InputGlobalComponent label={"Email"} placeholder={"email"} />
                     </View>
                     <View style={styles.inputContainer}>
-                        <Text style={styles.label}>Password</Text>
-                        <TextInput
-                            style={styles.input}
-                            placeholder='********'
-                            placeholderTextColor={styles.input.color}
-                        />
+                        <InputGlobalComponent label={"Password"} placeholder={"********"} />
                     </View>
                 </View>
             </View>

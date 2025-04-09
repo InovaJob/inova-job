@@ -7,7 +7,7 @@ import { View, Text, TouchableWithoutFeedback, Keyboard, SafeAreaView, ScrollVie
 import { styles } from "./styles"
 //Components
 import { GlobalButtonLogin } from "@/globalComponents/ButtonLogin";
-import { InputCNPJScreen } from "@/globalComponents/Inputs";
+import { InputGlobalComponent } from "@/globalComponents/Inputs";
 //Hooks
 import { IsKeyboardVisible } from "@/hooks/KeyboardVisible";
 
@@ -35,10 +35,10 @@ export default function RegisterStep1() {
                             <Text style={styles.subtitle}>Preencha mais alguns dados</Text>
                         </View>
                         <ScrollView>
-                            <InputCNPJScreen label={"Código postal"} placeholder={"62***-***"} value={cep} onChangeText={setCep} />
-                            <InputCNPJScreen label={"Endereço"} placeholder={"R. Descrição"} value={localidade} onChangeText={setLocalidade} />
-                            <InputCNPJScreen label={"Password"} placeholder={"********"} value={password} onChangeText={setPassword} />
-                            <InputCNPJScreen label={"Confirm password"} placeholder={"********"} value={confirmPassword} onChangeText={setConfirmPassword} />
+                            <InputGlobalComponent label={"Código postal"} placeholder={"62***-***"} value={cep} onChangeText={setCep} />
+                            <InputGlobalComponent label={"Endereço"} placeholder={"R. Descrição"} value={localidade} onChangeText={setLocalidade} />
+                            <InputGlobalComponent label={"Password"} placeholder={"********"} value={password} onChangeText={setPassword} />
+                            <InputGlobalComponent label={"Confirm password"} placeholder={"********"} value={confirmPassword} onChangeText={setConfirmPassword} />
 
                             <View style={styles.button}>
                                 <GlobalButtonLogin widthProp={"70%"} fontWeightProp={700} background={"#3c5a73"} children={"Próximo"} fontColor={"#ffff"} route={"/register/register_step2"} />

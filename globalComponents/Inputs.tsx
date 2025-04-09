@@ -1,10 +1,10 @@
 import { View, Text, TextInput } from "react-native";
 
-import { style } from "@/styles/StyleComponents/register.cnpj.style";
+import { style } from "@/styles/StyleComponents/inputs.component";
 
 import { inputProps } from "@/interfaces/componentInterfaces/InputProps";
 
-export const InputCNPJScreen: React.FC<inputProps> = ({ label, placeholder, onChangeText, value }) => {
+export const InputGlobalComponent: React.FC<inputProps> = ({ label, placeholder, onChangeText, value }) => {
     return (
         <View>
             <Text style={style.label}>{label}</Text>

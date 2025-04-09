@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "main-inova",
+    "icon": "./assets/images/icon-inova.png",
     "slug": "main-inova",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -12,8 +13,10 @@
     },
     "android": {
       "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon-inova.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.inovajob.ebenezer"
     },
     "web": {
       "bundler": "metro",
@@ -32,6 +35,19 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "splash": {
+      "image": "./assets/images/splash-inova.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ea241fab-75cf-4840-88b6-f7a88a8e7d0b"
+      }
     }
   }
 }

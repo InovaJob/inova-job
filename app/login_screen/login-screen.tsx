@@ -19,6 +19,7 @@ export default function LoginScreen() {
 
     return (
         <View style={styles.container}>
+
             <View style={styles.topContainer}>
                 <Ionicons name='arrow-back' style={styles.backButton} onPress={() => navigation.back()} />
             </View>
