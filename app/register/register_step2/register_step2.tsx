@@ -34,7 +34,7 @@ export default function RegisterStep1() {
                             <Text style={styles.title}>Sua conta está quase pronta!</Text>
                             <Text style={styles.subtitle}>Preencha mais alguns dados</Text>
                         </View>
-                        <ScrollView>
+                        <ScrollView showsVerticalScrollIndicator={false} >
                             <InputGlobalComponent label={"Código postal"} placeholder={"62***-***"} value={cep} onChangeText={setCep} />
                             <InputGlobalComponent label={"Endereço"} placeholder={"R. Descrição"} value={localidade} onChangeText={setLocalidade} />
                             <InputGlobalComponent label={"Password"} placeholder={"********"} value={password} onChangeText={setPassword} />

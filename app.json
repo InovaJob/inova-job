@@ -36,17 +36,9 @@
     "experiments": {
       "typedRoutes": true
     },
-    "splash": {
-      "image": "./assets/images/splash-inova.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
-    },
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "ea241fab-75cf-4840-88b6-f7a88a8e7d0b"
       }
     }
   }
