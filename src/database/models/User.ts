@@ -1,15 +1,26 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-import { entityUserInterface } from "../../interfaces/componentInterfaces/entity_user_cnpj";
+import { TypeEntityUserCnpj } from "@/types/entity_types/entity.user.cnpj";
 
 @Entity('userCnpj')
-export class UserCnpj implements entityUserInterface  {
+export class UserCnpj  {
+    constructor({ id, name, cnpj, email, phone, postalCode, password, confirmPassword }: TypeEntityUserCnpj) {
+        this.id = id;
+        this.name = name;
+        this.cnpj = cnpj;
+        this.email = email;
+        this.phone = phone;
+        this.postalCode = postalCode;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+    
     @PrimaryGeneratedColumn()
     id: number;
     @Column()
     name: string;
     @Column()
-    cnpj?: string;
+    cnpj: string;
     @Column()
     email?: string;
     @Column()
@@ -21,5 +32,4 @@ export class UserCnpj implements entityUserInterface  {
     @Column()
     confirmPassword: string;
 
-    constructor(id, )
 } 

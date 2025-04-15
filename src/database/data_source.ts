@@ -3,14 +3,14 @@ import * as SQLite from "expo-sqlite";
 
 import { UserCnpj } from "./models/User";
 
-const db = SQLite.openDatabaseAsync("database.db");
+const db = SQLite.openDatabaseAsync("inovadb.db");
 
-export const AppDataSource = new DataSource({
+export const MainDataSource = new DataSource({
     type: "expo",
+    database: "inovadb.db",
     driver: db,
-    database: "database.db",
-    synchronize: true,
     entities: [
         UserCnpj
-    ]  
+    ],
+    synchronize: true
 })

@@ -9,6 +9,7 @@
     },
     "experimentalDecorators": true,
     "strictPropertyInitialization": true,
+    "noImplicitAny": true
   },
   "include": [
     "**/*.ts",
