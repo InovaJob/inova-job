@@ -34,6 +34,8 @@ export default function RootLayout() {
         <Stack.Screen name='login_screen/login-screen' options={{ headerShown: false }} />
         <Stack.Screen name='register/register_step1/register_step1' options={{ headerShown: false }} />
         <Stack.Screen name='register/register_step2/register_step2' options={{ headerShown: false }} />
+        <Stack.Screen name="/register_cpf/step1/register_step1" options={{headerShown: false}} />
+        <Stack.Screen name="/register_cpf/step2/register_step2" options={{ headerShown: false}} />
       </Stack>
       <StatusBar style={"light"} backgroundColor='transparent' />
     </ThemeProvider>

@@ -24,7 +24,7 @@ export const ButtonsInitialScreen = () => {
                 </View>
                 <View style={styles.buttonsArea}>
                     <GlobalButtonLogin widthProp={'100%'} children={"entrar"} route={"/login_screen/login-screen"} fontColor={"#fff"} background={"#3E5C76"} />
-                    <GlobalButtonLogin widthProp={"100%"} children={"cadastre-se"} fontColor={"#3E5C76"} background={"#ffff"} />
+                    <GlobalButtonLogin widthProp={"100%"} children={"cadastre-se"} route={"/register_cpf/step1/register_step1"}  fontColor={"#3E5C76"} background={"#ffff"} />
                     <GlobalButtonLogin widthProp={"100%"} children={"cadastrar empresa"} route={"/register/register_step1/register_step1"} fontColor={"#3E5C76"} background={"#ffff"} />
                 </View>
             </View>
